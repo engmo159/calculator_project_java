@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>calculator</title>
+  </head>
+  <body>
+    <section
+      class="bg-[url('/image/1.jpg')] bg-cover flex items-center justify-center"
+    >
+      <div class="text-center">
+        <!-- text -->
+        <div class="text-2xl font-semibold m-4 text-white">
+          <h1>Calculator</h1>
+        </div>
+        <!-- calculator -->
+        <div
+          class="lg:h-[40rem] lg:w-96 bg-gradient-to-r from-gray-400 to-gray-700 rounded-lg flex flex-col items-center justify-around shadow-inner mb-8 border-gray-900 border-2"
+        >
+          <!-- screen  -->
+
+          <div
+            class="rounded-lg w-80 h-36 flex justify-center items-center bg-gradient-to-r from-slate-800 to-black shadow-inner"
+          >
+            <div class="w-[94%] h-[88%] rounded-lg bg-[#b0b5a6] shadow-inner">
+              <div id="inputDiv" class="w-full h-1/2 bg-transparent font-bold">
+                <!-- input number -->
+              </div>
+              <div id="resultDiv" class="w-full h-1/2 bg-transparent font-bold">
+                <!-- {calcResult} -->
+              </div>
+            </div>
+          </div>
+
+          <!-- buttons -->
+
+          <div
+            class="grid grid-cols-4 grid-rows-6 w-full gap-2 px-2 border-none"
+          >
+            <button></button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="clearCalculator('ce')"
+            >
+              CE
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="clearCalculator('c')"
+            >
+              C
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="calculate('/')"
+            >
+              /
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(7)"
+            >
+              7
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(8)"
+            >
+              8
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(9)"
+            >
+              9
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="calculate('*')"
+            >
+              *
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(4)"
+            >
+              4
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(5)"
+            >
+              5
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(6)"
+            >
+              6
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="calculate('-')"
+            >
+              -
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(1)"
+            >
+              1
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(2)"
+            >
+              2
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(3)"
+            >
+              3
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="calculate('+')"
+            >
+              +
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="calculate('+/-')"
+            >
+              +/-
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber(0)"
+            >
+              0
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="addNumber('.')"
+            >
+              .
+            </button>
+            <button
+              class="bg-[#29303d] hover:bg-slate-700 text-white rounded-lg py-4 hover:scale-105 shadow-inner"
+              onclick="resultFunc(currentOperation )"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
