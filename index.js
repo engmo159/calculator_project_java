@@ -5,16 +5,25 @@ let currentOperation = ''
 const resultDiv = document.querySelector('#resultDiv')
 const inputDiv = document.querySelector('#inputDiv')
 let calcScreen = ''
+let resetCalculation = false
 
 const addNumber = num => {
-  result = 0
-  firstNumber += num
+  if (resetCalculation) {
+    firstNumber = num.toString()
+    resetCalculation = false
+  } else {
+    firstNumber += num
+  }
   updateScreen()
-  console.log(`first number:${firstNumber},second number:${secondNumber}`)
+  console.log(
+    `first number:${firstNumber},second number:${secondNumber},result:${result}`
+  )
 }
 const calculate = operation => {
-  secondNumber = firstNumber
-  firstNumber = ''
+  if (firstNumber !== '') {
+    secondNumber = firstNumber
+    firstNumber = ''
+  }
   currentOperation = operation
   updateScreen()
 }
@@ -30,10 +39,12 @@ const resultFunc = () => {
   } else {
     return
   }
-  firstNumber = ''
+  firstNumber = result.toString()
   secondNumber = ''
   currentOperation = ''
   resultDiv.innerHTML = result
+  result = 0
+  resetCalculation = true
 }
 const clearCalculator = btn => {
   if (btn == 'ce') {
