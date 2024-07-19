@@ -65,3 +65,8 @@ const updateScreen = () => {
   calcScreen = `${secondNumber} ${currentOperation} ${firstNumber} `
   inputDiv.innerHTML = calcScreen
 }
+
+const negative = () => {
+  firstNumber = -firstNumber
+  updateScreen()
+}
